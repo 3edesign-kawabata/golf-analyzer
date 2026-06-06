@@ -743,11 +743,11 @@ function analyze() {
   let shotType, shotTypeJa, bannerClass, curveVal;
   if (sd === null) {
     shotType = 'Unknown'; shotTypeJa = '計測なし'; bannerClass = 'straight'; curveVal = 0;
-  } else if (sd >= 800)         { shotType = 'Slice';    shotTypeJa = 'スライス';   bannerClass = 'slice';    curveVal = -0.8; }
-  else if (sd >= 400)           { shotType = 'Fade';     shotTypeJa = 'フェード';   bannerClass = 'fade';     curveVal = -0.4; }
-  else if (sd > -400)           { shotType = 'Straight'; shotTypeJa = 'ストレート'; bannerClass = 'straight'; curveVal = -sd / 1000; }
-  else if (sd > -800)           { shotType = 'Draw';     shotTypeJa = 'ドロー';     bannerClass = 'draw';     curveVal = 0.4; }
-  else                          { shotType = 'Hook';     shotTypeJa = 'フック';     bannerClass = 'hook';     curveVal = 0.8; }
+  } else if (sd >= 800)         { shotType = 'Slice';    shotTypeJa = 'スライス';   bannerClass = 'slice';    curveVal = 0.8; }
+  else if (sd >= 400)           { shotType = 'Fade';     shotTypeJa = 'フェード';   bannerClass = 'fade';     curveVal = 0.4; }
+  else if (sd > -400)           { shotType = 'Straight'; shotTypeJa = 'ストレート'; bannerClass = 'straight'; curveVal = sd / 1000; }
+  else if (sd > -800)           { shotType = 'Draw';     shotTypeJa = 'ドロー';     bannerClass = 'draw';     curveVal = -0.4; }
+  else                          { shotType = 'Hook';     shotTypeJa = 'フック';     bannerClass = 'hook';     curveVal = -0.8; }
 
   // ---- SMASH RATING ----
   let smashRating = '', smashTag = '', smashTagClass = '';
