@@ -1018,9 +1018,9 @@ function drawTrajectory(curve, sd) {
 
   // Ball path
   const endX = W - 50;
-  const endY = H / 2 + curve * (H * 0.4);
+  const endY = H / 2 - curve * (H * 0.4);
   const cp1X = 60 + (endX - 60) * 0.4, cp1Y = H / 2;
-  const cp2X = 60 + (endX - 60) * 0.75, cp2Y = H / 2 + curve * (H * 0.3);
+  const cp2X = 60 + (endX - 60) * 0.75, cp2Y = H / 2 - curve * (H * 0.3);
 
   const pathColor = curve > 0.5 ? '#c0392b' : curve < -0.5 ? '#c0392b' : curve > 0.2 ? '#2a4a1a' : curve < -0.2 ? '#1a4a6a' : '#1a3a1a';
 
@@ -1384,9 +1384,9 @@ function drawShareTrajectory(card, curve) {
   ctx.fillText('TEE', 34, H/2 - 12);
 
   // 弾道
-  const endX = W - 40, endY = H/2 + curve * (H * 0.38);
+  const endX = W - 40, endY = H/2 - curve * (H * 0.38);
   const cp1X = 50 + (endX-50)*0.4, cp1Y = H/2;
-  const cp2X = 50 + (endX-50)*0.75, cp2Y = H/2 + curve*(H*0.28);
+  const cp2X = 50 + (endX-50)*0.75, cp2Y = H/2 - curve*(H*0.28);
   const lineColor = curve > 0.4 ? '#e07050' : curve < -0.4 ? '#e07050' : '#4a9c4a';
 
   ctx.strokeStyle = lineColor;
